@@ -21,7 +21,7 @@ class BanRequestHandler extends BaseHandler {
         let proxy = await ProxyModel.findOneAndUpdate({
             _id: msg.proxy_id
         }, {
-            addToSet: {
+            $addToSet: {
                 bans: host
             }
         }).exec();
@@ -35,9 +35,9 @@ class BanRequestHandler extends BaseHandler {
             url: msg.url,
             host: host
         });
-        let restProxy = ProxyModel.find({
+        let restProxy = await ProxyModel.find({
             bans: {
-                $nin: host
+                $ne: host
             }
         }).exec();
         this.app.logger.info('Ban host %s has %d proxies left available.', host, restProxy.length);
