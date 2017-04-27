@@ -1,0 +1,24 @@
+{
+  "name": "disproxy-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonz93/disproxy-master.git"
+  },
+  "author": "Sihao Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonz93/disproxy-master/issues"
+  },
+  "homepage": "https://github.com/jasonz93/disproxy-master#readme",
+  "dependencies": {
+    "klaw": "^1.3.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.6"
+  }
+}
